@@ -6,5 +6,5 @@ A C++ file for the base node(ESP32) to acquire data(RSSI) from the measuring nod
 A C file for the measuring nodes(ESP32) to collect data(RSSI) of each link and communicate with the base node.
 # weightcal.m
 A MATLAB script file which calculates the weight matrix based on the xPRA model.
-# recon.m:
+# recon.m
 A MATLAB script file which uses the weight matrix calculated by weightcal.m to run the image reconstruction algorithm(TVAL3).
