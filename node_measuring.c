@@ -64,14 +64,16 @@ static void oncsirecv(void *ctx, wifi_csi_info_t *info) {
         }
     }
     if (scanned[nodeid - 1] == false) {
-        //rdata.value[nodeid - 1] = info->rx_ctrl.rssi;
-        //csi start
-        int sum = 0;
+        rdata.value[nodeid - 1] = info->rx_ctrl.rssi;    //This line of code is to collect RSSI values from every other measuring nodes
+        
+        // This block of code is to enable CSI data collection(amplitude). However, the value of the CSI amplitude does not decrease when the link is blocked by an object like RSSI.
+        
+        /*int sum = 0;
         for (int i = 0; i < (info->len / 2); i++) {
             sum+=(pow(info->buf[2*i], 2) + pow(info->buf[2*i + 1], 2));
         }
-        rdata.value[nodeid - 1] = sum;
-        //csi end
+        rdata.value[nodeid - 1] = sum; */
+        
         if (nodeid == tosend) {
             for (int i = 0; i < nodenum; i++) {
                 if (i == num - 1 || i == num) {
