@@ -10,21 +10,21 @@ extern "C" {
     #include "freertos/FreeRTOS.h"
     #include "freertos/task.h"
     void app_main(void);
-    //static void ondatarecv(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len);
 }
 
 #define WCHAN 8
 #define MAXID 1024
 
-static const int nodenum = 16;
-int values[nodenum][nodenum - 1];
-static const char* scanmsg = "scan";
+static const int nodenum = 16;    //Number of measuring nodes
+int values[nodenum][nodenum - 1];    //RSSI data of every communication link
+static const char* scanmsg = "scan";    
 static const char* checkmsg = "check";
 static const char* datamsg = "data";
 static const char* rsmsg = "restart";
 int bootcnt = 0;
 int note_expect = 0;
 int data_expect[nodenum];
+// MAC addresses of the base node and all measuring nodes
 static const uint8_t macbase[] = {0x1a, 0xff, 0x00, 0x00, 0x00, 0x00};
 static const uint8_t mac01[] = {0x1a, 0x01, 0x00, 0x00, 0x00, 0x00};
 static const uint8_t mac02[] = {0x1a, 0x02, 0x00, 0x00, 0x00, 0x00};
@@ -49,7 +49,7 @@ bool boot = false;
 bool ack = false;
 
 typedef struct packet {
-  int value[nodenum];
+  int value[nodenum];    //RSSI data of all other measuring nodes
   int nodeid;
   int pktid;
   char info[16];
