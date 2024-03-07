@@ -111,13 +111,8 @@ static void ondatarecv(const esp_now_recv_info_t *recv_info, const uint8_t *data
         //printf("node#%d: ", i + 1);
         for (int j = 0; j < nodenum - 1; j++) {
           //printf("%d\n", values[i][j]);
-          //int rss = values[i][j] * -1;
-          //int rss = values[i][j];
-          uint8_t *b = (uint8_t*) &values[i][j];
-          for (int k = 0; k < 4; k++) {
-            Serial.write(b[k]);
-            //vTaskDelay(50 / portTICK_PERIOD_MS);
-          }
+          int rss = values[i][j] * -1;
+          Serial.write(rss);
         }
         //printf("\n");
       }
