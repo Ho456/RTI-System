@@ -8,3 +8,5 @@ A C file for the measuring nodes(ESP32) to collect data(RSSI) of each link and c
 A MATLAB script file which calculates the weight matrix based on the xPRA-LM model.
 # recon.m
 A MATLAB script file which uses the weight matrix calculated by weightcal.m to run the image reconstruction algorithm(TVAL3).
+# simulation.py
+A python file for simulation with forward simulation RSSI data.
