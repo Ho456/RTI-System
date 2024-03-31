@@ -12,7 +12,7 @@ function U = TVAL3(A,b,p,q,opts,lambX,lambY)
 % Advisor: Prof. Yin Zhang and Wotao Yin
 % Computational and Applied Mathematics department, Rice University
 % May. 15, 2009
-opts.nonneg = true
+% opts.nonneg = true
 if ~isfield(opts,'TVL2')
     opts.TVL2 = false;
 end
