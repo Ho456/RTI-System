@@ -9,7 +9,7 @@ oct2py.octave.addpath('C:/Users/tszho/codeclone/Codes/TV_reg/Fast_Walsh_Hadamard
 oct2py.octave.addpath('C:/Users/tszho/codeclone/Codes/TV_reg/Utilities')
 
 print('start loading kernel')
-weights = oct2py.octave.testscript()
+weights = oct2py.octave.test()
 print('kernel loaded')
 axis1 = 60
 axis2 = 60
