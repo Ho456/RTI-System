@@ -1,3 +1,4 @@
+clear;
 load ('TxRx1.mat','TxRx1')
 load ('TxRxpairs.mat','TxRxpairs')
 Nodes=TxRxpairs; clear TxRxpairs
