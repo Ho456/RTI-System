@@ -1,5 +1,5 @@
 # interface.py
-A python file which enables serial communication between PC and the base node.
+A python file which enables data parsing and serial communication between PC and the base node.
 # node_base/main/main.cpp
 A C++ file for the base node(ESP32) to acquire data(RSSI) from the measuring nodes and communicate with PC.
 # node_measuring/main/main.c
