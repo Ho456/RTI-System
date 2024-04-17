@@ -46,7 +46,8 @@ for i = 1:length(Nodes(1,:))
         (E_d(Nodes(2,i), Nodes(1,i)))));
 end
 
-FrytB =  [real(Fryt) -imag(Fryt)];
+% FrytB =  [real(Fryt) -imag(Fryt)];
+FrytB = -imag(Fryt);
 if isfile('kernel.mat')
   delete('kernel.mat')
 end

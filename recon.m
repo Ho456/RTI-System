@@ -17,9 +17,10 @@ function U = recon(A, M, arravg, arr)
   opts.nonneg = true;
   lambY = 1;
   lambX = 1;
-  O = TVAL3(A,arrult,M,2*M,opts,lambX,lambY);
-  Oreal = O(1:M,1:M);
-  Oimag = O(1:M,M+1:2*M);
+  %O = TVAL3(A,arrult,M,2*M,opts,lambX,lambY);
+  %Oreal = O(1:M,1:M);
+  %Oimag = O(1:M,M+1:2*M);
+  Oimag = TVAL3(A, arrult, M, M, opts, lambX, lambY);
 
   Atten = 4*pi*(Oimag*0.5)./lambda; % Estimate Attenuation
   %% Reconstruction
