@@ -11,4 +11,4 @@ A MATLAB function file which uses the weight matrix calculated by weightcal.m to
 # simulation.py
 A python file for simulation with forward simulation RSSI data.
 # demo_video
-Video demonstration for the system.
+Video Demonstration for the system.
